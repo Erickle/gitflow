@@ -52,13 +52,12 @@ public class App
            
         
         String body = in.readLine();
-        System.out.println(body);
 
         out.write("HTTP/1.1 200 OK\r\n");
         out.write(String.format("Content-Length: %d\r\n", body.length()));
         out.write("Content-Type: text/html\r\n");
         out.write("\r\n");
-        out.write(body);
+        out.write("<h1>"+body+"<h1>");
 
         out.close();
         in.close();
