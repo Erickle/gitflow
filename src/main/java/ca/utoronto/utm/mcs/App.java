@@ -49,7 +49,9 @@ public class App
            feature/DisplayPathHeader.
         */
            
-        String body = "<h1>Gitflow Tutorial</h1>";
+        
+        String body = in.readLine();
+        System.out.println(body);
 
         out.write("HTTP/1.1 200 OK\r\n");
         out.write(String.format("Content-Length: %d\r\n", body.length()));
